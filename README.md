@@ -31,8 +31,7 @@ cd your-repo
     Create and activate a virtual environment:
 
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
+source venv/bin/activate   #Linux
 
     Install dependencies:
 
@@ -48,12 +47,12 @@ python manage.py createsuperuser
 
     Start Redis server (make sure Redis is installed and running on localhost:6379):
 
-redis-server
+docker run -it --rm --name redis -p 6379:6379 redis:7.2.4
 
     Run the development server:
 
 python manage.py runserver
 
-    Navigate to: 127.0.0.1:8000/login
+navigate to: 127.0.0.1:8000/login
 
-Once you login you will be in the chat
+once you login you will be in the chat
