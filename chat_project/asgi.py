@@ -14,10 +14,10 @@ from django.core.asgi import get_asgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chat_project.settings")
 
-# Make sure settings are loaded before doing anything else
+
 django_asgi_app = get_asgi_application()
 
-import chat.routing   # <-- import your app’s routing *after* settings are loaded
+import chat.routing
 
 application = ProtocolTypeRouter({
     "http": django_asgi_app,
