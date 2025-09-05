@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Sign Up</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
         .form-container { background-color: #f9f9f9; padding: 20px; border-radius: 5px; }
@@ -16,16 +16,14 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Log In</h1>
-        {% if form.errors %}
-            <p class="error">Your username or password didn't match. Please try again.</p>
-        {% endif %}
+        <h1>Sign Up</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Log In</button>
+            <button type="submit">Sign Up</button>
         </form>
-        <p>Don't have an account? <a href="{% url 'chat:signup' %}">Sign up</a></p>
+        <p>Already have an account? <a href="{% url 'chat:login' %}">Log in</a></p>
     </div>
 </body>
 </html>
+

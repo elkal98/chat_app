@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'daphne',
+    'channels',
     'chat.apps.ChatConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -137,4 +138,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/chat/login/'
-LOGIN_REDIRECT_URL = '/chat/room/'
+#LOGIN_REDIRECT_URL = '/chat/room/'
+
+LOGIN_REDIRECT_URL = 'chat:chat_room'  # After login
+LOGOUT_REDIRECT_URL = 'chat:login'     # After logout
