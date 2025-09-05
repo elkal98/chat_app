@@ -54,6 +54,6 @@ redis-server
 
 python manage.py runserver
 
-Navigate to: 127.0.0.1:8000/login
+    Navigate to: 127.0.0.1:8000/login
 
 Once you login you will be in the chat
